@@ -1,0 +1,39 @@
+
+#header{
+	nav{
+		padding: 3.75rem 2.3rem 0 2.25rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: peru;
+
+		#logo{
+			height: 60px;
+			width: 60px;
+		}
+	}
+}
+
+	#hero{
+		margin-top: 3rem;
+
+		.textContainer{
+			background-color: gold;
+			max-width: 90%;
+			margin: 0 auto;
+				h1{
+					font-family: 'Montserrat', sans-serif;
+					font-size: 1.7rem;
+				}
+				p{
+					font-family: 'Merriweather Sans', sans-serif;
+					font-size: 1rem;
+					line-height: 1.5rem;
+				}
+			}
+
+		.imgContainer{
+
+		}
+	}
+	
