@@ -1,5 +1,25 @@
 
 $violet : #ac00e6;
+$fuentePrincipal: 'Josefin Sans', sans-serif;
+$fuenteSecundaria: 'Roboto', sans-serif;
+$colorTitulo: #43414e;
+$colorParrafo: #6e7076;
+
+body{
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5{
+	color: $colorTitulo;
+}
+
+p{
+	color: $colorParrafo;
+}
+
+
+
+
 
 #header{
 	nav{
@@ -10,7 +30,7 @@ $violet : #ac00e6;
 
 		h1{
 			font-family: 'Montserrat', sans-serif;
-			font-size: 2rem;
+			font-size: 1rem;
 		}
 
 		ul{
@@ -27,17 +47,17 @@ $violet : #ac00e6;
 			max-width: 80%;
 			margin: 0 auto;
 				h1{
-					font-family: 'Montserrat', sans-serif;
+					font-family: $fuentePrincipal;
 					font-size: 1.7rem;
 				}
 				p{
-					font-family: 'Merriweather Sans', sans-serif;
+					font-family: $fuenteSecundaria;
 					font-size: 1.1rem;
 					line-height: 1.6rem;
 				}
 
 				button{
-					font-family: 'Merriweather Sans', sans-serif;
+					font-family: $fuentePrincipal;
 					font-size: .8rem;
 					border-radius: 6px;
 					background-color: $violet;
@@ -45,6 +65,7 @@ $violet : #ac00e6;
 					color: #fff;
 					border: none;
 					text-transform: uppercase;
+					cursor: pointer;
 				}
 			}
 
@@ -54,6 +75,61 @@ $violet : #ac00e6;
 			img{
 				max-width: 100%;
 			}
+		}
+	}
+
+	#services{
+		margin:0;
+		margin-top: 5rem;
+		margin-bottom: 3rem;
+		
+		#titleContainer{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			h2{
+				font-family: $fuentePrincipal;
+				font-size: 28px;
+				margin:0;
+			}
+
+			p{
+				font-family: $fuenteSecundaria;
+				font-size: 16px;
+				margin: .3rem auto;
+			}
+		}
+
+		#iconsContainer{
+			margin-top: 3rem;
+
+  			.box{
+  				align-items: center;
+  				justify-content: center;
+  				display: flex;
+  				flex-direction: column;
+  				padding-bottom: 2rem;
+	  			img{
+				
+				}
+				h3{
+					font-family: $fuentePrincipal;
+					margin: 2rem 0 .5rem;
+				}
+
+				p{
+					max-width: 70%;
+					font-family: $fuenteSecundaria;
+					font-size: 16px;
+					line-height: 26px;
+					text-align: center;
+					margin: .3rem 0;
+				}
+
+  			}
+			
 		}
 	}
 	
@@ -95,13 +171,6 @@ $violet : #ac00e6;
 	nav{
 		max-width: 85%;
 
-
-
-		#logo{
-			height: 40px;
-			width: 40px;
-		}
-
 		i{
 			display: none;
 		}
@@ -117,7 +186,12 @@ $violet : #ac00e6;
 				font-family: 'Merriweather Sans', sans-serif;
 				font-size: .9rem;
 				font-weight: 700;
-				color: $violet;
+
+				a{
+					text-decoration: none;
+					color: $violet;
+					cursor: pointer;
+				}
 			}
 		}
 	}
@@ -174,6 +248,67 @@ $violet : #ac00e6;
 			}
 		}
 	}
+
+	#services{
+		margin:0;
+		margin-top: 7rem;
+		margin-bottom: 33rem;
+		
+		#titleContainer{
+
+			h2{
+				font-family: $fuentePrincipal;
+				font-size: 28px;
+				margin:0;
+			}
+
+			p{
+				font-family: $fuenteSecundaria;
+				font-size: 16px;
+				margin: .3rem auto;
+			}
+		}
+
+		#iconsContainer{
+			display: grid;
+			grid-template-columns: 33.3% 33.3% 33.3%;
+			grid-template-rows: 1fr;
+  			max-width: 95%;
+  			margin: 5rem auto 0;
+
+  			.box{
+  				
+  				padding-bottom: 0rem;
+	  			img{
+				
+				}
+
+				h3{
+				}
+
+				p{
+
+				}
+  			}
+
+  			#box1{
+  				grid-column:  1 / 2;
+  				grid-row: 1 / 2;
+  			}	
+
+  			#box2{
+  				grid-column:  2 / 3;
+  				grid-row: 1 / 2;
+  			}	
+
+  			#box3{
+  				grid-column:  3 / 4;
+  				grid-row: 1 / 2;
+  			}	
+		}
+	}
+
+
 }
 
 @media screen and (min-width:1024px) {
@@ -184,9 +319,9 @@ $violet : #ac00e6;
 		}
 	}
 		
-		#hero{
+	#hero{
 		display: grid;
-		grid-template-columns: 15% 30% 55%;
+		grid-template-columns: 7% 38% 55%;
 		grid-template-rows: 25% 25% 25% 25%;
 		max-width: 100%;
 		margin: 5rem auto 0;
@@ -195,15 +330,39 @@ $violet : #ac00e6;
 			grid-column: 2 / 3;
 			grid-row: 1 / 5;
 
+			h1{
+				font-size: 2.3rem;
+				line-height: 3rem;
+				margin: 1rem auto 0 auto;
+				padding-right: 4rem;
+			}
+			p{
+				font-size: 1rem;
+				line-height: 1.5rem;
+				padding-right: 6rem;
+			}
+		}
+	}
+
+	
+}
+
+@media screen and (min-width:1200px) {
+
+		#hero{
+
+		.textContainer{
 
 				h1{
-					font-size: 2.6rem;
+					font-size: 3rem;
 					line-height: 3.5rem;
 					margin: 1rem auto 0 auto;
+					padding-right: 0rem;
 				}
 				p{
-					font-size: 1.15rem;
+					font-size: 1.3rem;
 					line-height: 1.75rem;
+					padding-right: 0rem;
 				}
 			}
 		}
@@ -213,9 +372,6 @@ $violet : #ac00e6;
 	
 
 	#header{
-			display: grid;
-			grid-template-columns: 10% 80% 10%;
-			grid-template-rows: 1fr;
 
 			nav{
 				padding: 0;
@@ -225,6 +381,7 @@ $violet : #ac00e6;
 				grid-column: 2 / 3;
 				grid-row: 1 / 2;
 				width: 100%;
+				margin-top: 1.5rem;
 			}
 		}
 	
@@ -232,22 +389,24 @@ $violet : #ac00e6;
 	#hero{
 		margin-top: 10rem;
 		max-width: 95%;
-		grid-template-columns: 13% 32% 55%;
+		grid-template-columns: 5% 35% 55%;
 
 		.textContainer{
 			grid-column: 2 / 3;
 			grid-row: 1 / 5;
+			max-width: 85%;
 
 
 				h1{
-					font-size: 3.6rem;
-					line-height: 4.5rem;
-					margin: 1rem auto 0 auto;
+					font-size: 2.5rem;
+					line-height: 3.5rem;
+					margin: -3rem auto 0 auto;
 				}
 				p{
 					font-size: 1.4rem;
-					line-height: 1.9rem;
+					line-height: 2.5rem;
 					color: #4e5867;
+					padding-right: 3rem;
 				}				
 			}
 
@@ -260,14 +419,37 @@ $violet : #ac00e6;
 			justify-content: center;
 
 			img{
-				max-width: 90%;
+				max-width: 95%;
 			}
 		}
 	}
 }
 
 @media screen and (min-width:1600px){
-		#hero{
+
+	#header{
+
+		nav{
+
+			ul{
+				display: flex;
+				width: 15%;
+				margin-right: 5%;
+				justify-content: space-between;
+				list-style: none;
+
+				li{
+					font-family: 'Merriweather Sans', sans-serif;
+					font-size: .9rem;
+					font-weight: 700;
+					color: $violet;
+				}
+			}
+		}
+	}
+
+	#hero{
 		margin-top: 6rem;
 		}
-}
+	}
+
