@@ -2,10 +2,15 @@ body {
   margin: 0; }
 
 h1, h2, h3, h4, h5 {
-  color: #43414e; }
+  color: #43414e;
+  font-family: "Josefin Sans", sans-serif; }
 
 p {
-  color: #6e7076; }
+  color: #6e7076;
+  font-family: "Roboto", sans-serif; }
+
+ul {
+  font-family: "Josefin Sans", sans-serif; }
 
 #header nav {
   padding: 1.75rem 2.3rem 0 2.25rem;
@@ -13,7 +18,6 @@ p {
   justify-content: space-between;
   align-items: center; }
   #header nav h1 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 1rem; }
   #header nav ul {
     display: none; }
@@ -24,10 +28,8 @@ p {
     max-width: 80%;
     margin: 0 auto; }
     #hero .textContainer h1 {
-      font-family: "Josefin Sans", sans-serif;
       font-size: 1.7rem; }
     #hero .textContainer p {
-      font-family: "Roboto", sans-serif;
       font-size: 1.1rem;
       line-height: 1.6rem; }
     #hero .textContainer button {
@@ -55,11 +57,9 @@ p {
     justify-content: center;
     align-items: center; }
     #services #titleContainer h2 {
-      font-family: "Josefin Sans", sans-serif;
       font-size: 28px;
       margin: 0; }
     #services #titleContainer p {
-      font-family: "Roboto", sans-serif;
       font-size: 16px;
       margin: .3rem auto; }
   #services #iconsContainer {
@@ -71,15 +71,82 @@ p {
       flex-direction: column;
       padding-bottom: 2rem; }
       #services #iconsContainer .box h3 {
-        font-family: "Josefin Sans", sans-serif;
         margin: 2rem 0 .5rem; }
       #services #iconsContainer .box p {
         max-width: 70%;
-        font-family: "Roboto", sans-serif;
         font-size: 16px;
         line-height: 26px;
         text-align: center;
         margin: .3rem 0; }
+
+#features {
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto; }
+  #features #textFeature h2 {
+    font-size: 28px;
+    text-align: center;
+    padding: 0 1rem; }
+  #features #textFeature ul {
+    font-family: "Roboto", sans-serif;
+    color: #6e7076;
+    list-style: none;
+    padding-left: 0px;
+    max-width: 80%;
+    margin: 0 auto; }
+    #features #textFeature ul li {
+      padding: .5rem 0px;
+      line-height: 1.5rem; }
+    #features #textFeature ul .iconoOK::before {
+      font-family: "Font Awesome 5 Free";
+      content: "\f058";
+      padding-right: 1rem;
+      color: #ac00e6; }
+  #features #imageFeature img {
+    max-width: 100%; }
+
+#prices {
+  background-color: #600080;
+  margin-top: 3rem; }
+  #prices h2 {
+    font-size: 28px;
+    text-align: center;
+    color: #fff;
+    padding-top: 5rem; }
+  #prices .container {
+    padding-top: 0rem;
+    padding-bottom: 3rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column; }
+    #prices .container .boxPrice {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 2rem auto 2rem; }
+      #prices .container .boxPrice h5 {
+        color: #fff !important;
+        margin: 1rem 0; }
+      #prices .container .boxPrice .priceNumber {
+        font-size: 58px;
+        font-weight: 700;
+        margin: .5rem 0;
+        color: #d24dff; }
+      #prices .container .boxPrice ul {
+        list-style: none;
+        padding-left: 0;
+        text-align: center; }
+        #prices .container .boxPrice ul li {
+          margin: .7rem 0; }
+      #prices .container .boxPrice button {
+        font-family: "Roboto", sans-serif;
+        font-size: .8rem;
+        border: 2px solid #fff;
+        border-radius: 33px;
+        background-color: transparent;
+        padding: 20px 35px;
+        color: #fff; }
 
 @media screen and (min-width: 600px) {
   #header nav {
@@ -91,7 +158,21 @@ p {
     #hero .textContainer {
       max-width: 80%; }
     #hero .imgContainer {
-      margin-top: 5rem; } }
+      margin-top: 5rem; }
+
+  #features {
+    max-width: 85%; }
+    #features #textFeature h2 {
+      font-size: 28px;
+      text-align: center;
+      padding: 0 1rem; }
+    #features #textFeature ul {
+      max-width: 50%; }
+    #features #imageFeature {
+      display: flex;
+      justify-content: center; }
+      #features #imageFeature img {
+        max-width: 100%; } }
 @media screen and (min-width: 600px) and (max-width: 1024px) and (orientation: landscape) {
   h1 {
     color: red; } }
@@ -107,7 +188,6 @@ p {
       justify-content: space-between;
       list-style: none; }
       #header nav ul li {
-        font-family: 'Merriweather Sans', sans-serif;
         font-size: .9rem;
         font-weight: 700; }
         #header nav ul li a {
@@ -154,7 +234,7 @@ p {
   #services {
     margin: 0;
     margin-top: 7rem;
-    margin-bottom: 33rem; }
+    margin-bottom: 6rem; }
     #services #titleContainer h2 {
       font-family: "Josefin Sans", sans-serif;
       font-size: 28px;
@@ -179,7 +259,42 @@ p {
         grid-row: 1 / 2; }
       #services #iconsContainer #box3 {
         grid-column: 3 / 4;
-        grid-row: 1 / 2; } }
+        grid-row: 1 / 2; }
+
+  #features {
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 25% 25% 25% 25%;
+    margin: 0 auto 3rem auto; }
+    #features #textFeature {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      grid-row: 1 / 5;
+      grid-column: 1 / 2; }
+      #features #textFeature ul {
+        max-width: 80%; }
+    #features #imageFeature {
+      grid-row: 1 / 5;
+      grid-column: 2 / 3; }
+
+  #prices h2 {
+    font-size: 32px; }
+  #prices .container {
+    padding-top: 0rem;
+    padding-bottom: 3rem;
+    max-width: 90%;
+    margin: 0 auto;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%; }
+    #prices .container .boxPrice {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 2rem auto 2rem; } }
 @media screen and (min-width: 1024px) {
   #header nav {
     max-width: 85%; }
@@ -201,7 +316,36 @@ p {
       #hero .textContainer p {
         font-size: 1rem;
         line-height: 1.5rem;
-        padding-right: 6rem; } }
+        padding-right: 6rem; }
+
+  #prices h2 {
+    font-size: 32px; }
+  #prices .container {
+    padding-top: 0rem;
+    padding-bottom: 3rem;
+    max-width: 90%;
+    margin: 0 auto;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 50% 50% 50% 50%;
+    grid-template-rows: 100%; }
+    #prices .container .boxPrice {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 2rem auto 2rem; }
+    #prices .container #boxPrice1 {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2; }
+    #prices .container #boxPrice2 {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2; }
+    #prices .container #boxPrice3 {
+      grid-column: 3 / 4;
+      grid-row: 1 / 2; }
+    #prices .container #boxPrice4 {
+      grid-column: 4 / 5;
+      grid-row: 1 / 2; } }
 @media screen and (min-width: 1200px) {
   #hero .textContainer h1 {
     font-size: 3rem;
@@ -211,7 +355,14 @@ p {
   #hero .textContainer p {
     font-size: 1.3rem;
     line-height: 1.75rem;
-    padding-right: 0rem; } }
+    padding-right: 0rem; }
+
+  #services #iconsContainer {
+    max-width: 80%; }
+
+  #features {
+    column-gap: 1.5rem;
+    max-width: 1000px; } }
 @media screen and (min-width: 1440px) {
   #header nav {
     padding: 0;
@@ -248,7 +399,20 @@ p {
       flex-direction: column;
       justify-content: center; }
       #hero .imgContainer img {
-        max-width: 95%; } }
+        max-width: 95%; }
+
+  #services #iconsContainer {
+    max-width: 76%; }
+
+  #features {
+    max-width: 1200px; }
+    #features #textFeature h2 {
+      margin: 0 0 1rem 0;
+      font-size: 34px; }
+    #features #textFeature ul {
+      font-size: 20px; }
+      #features #textFeature ul li {
+        padding: 1rem 0; } }
 @media screen and (min-width: 1600px) {
   #header nav ul {
     display: flex;
@@ -263,6 +427,26 @@ p {
       color: #ac00e6; }
 
   #hero {
-    margin-top: 6rem; } }
+    margin-top: 6rem; }
+
+  #features {
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 25% 25% 25% 25%;
+    margin: 0 auto 12rem auto; }
+    #features #textFeature {
+      max-width: 80%;
+      grid-row: 1 / 5;
+      grid-column: 1 / 2; }
+      #features #textFeature ul {
+        max-width: 90%;
+        margin: 0 auto; }
+    #features #imageFeature {
+      grid-row: 1 / 5;
+      grid-column: 2 / 3; }
+      #features #imageFeature img {
+        height: 750px;
+        width: auto; } }
 
 /*# sourceMappingURL=style.css.map */
