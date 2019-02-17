@@ -285,6 +285,7 @@ ul{
 
 	#proccess{
 		margin-top: 5rem;
+		margin-bottom: 5rem;
 
 			#imgTitle{
 				h2{
@@ -298,8 +299,23 @@ ul{
 			}
 
 			#proccesses{
-				.box{
+					display: flex;
+					flex-direction: column;
+					
 
+				.box{
+					max-width: 85%;
+					margin: 0 auto 1rem;
+					text-align: center;
+
+					h3{
+
+					}
+
+					p{
+						font-size: 16px;
+						line-height: 24px;
+					}
 				}
 			}
 	}
@@ -385,6 +401,24 @@ ul{
 			}
 		}
 	}
+
+	#proccess{
+		margin-top: 5rem;
+
+			#proccesses{
+
+					
+
+				.box{
+					max-width: 75%;
+
+
+					p{
+						text-align: left;
+					}
+				}
+			}
+}
 }
 
 @media screen and (min-width:600px) and (max-width: 1024px) and (orientation: landscape) {
@@ -605,10 +639,47 @@ ul{
 					li{
 						align-self: center;
 					}
-				}
-				
+				}	
 			}
-	}
+		}
+
+		#proccess{
+
+			#imgTitle{
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+
+					h2{
+						margin: 0 10rem;
+					}
+
+					img{
+						max-width: 60%;
+						margin: 0 auto;
+					}
+				}
+
+			#proccesses{
+				display: grid;
+				grid-template-columns: 33.3% 33.3% 33.3%;
+				grid-template-rows: 1fr;
+					
+				.box{
+					max-width: 80%;
+					margin: 0 auto 1rem;
+					text-align: center;
+
+					h3{
+						text-align: center;
+					}
+
+					p{
+						text-align: center;
+					}
+				}
+			}
+		}
 }
 
 @media screen and (min-width:1024px) {
@@ -689,7 +760,22 @@ ul{
 			}
 		}
 	}
-}
+
+	#proccess{
+
+			#imgTitle{
+
+					h2{
+						margin: 0 16rem;
+						}
+					}
+
+			#proccesses{
+				max-width: 80%;
+				margin: 0 auto;
+			}	
+		}
+	}
 
 @media screen and (min-width:1200px) {
 
@@ -721,6 +807,21 @@ ul{
 		#features{
 			column-gap: 1.5rem;
 			max-width: 1000px;
+		}
+
+		#proccess{
+			margin: 5rem auto 2rem;
+
+			#imgTitle{
+
+				h2{
+					margin: 0 22%;
+				}
+
+				img{
+					max-width: 35%;
+				}
+			}
 		}
 }
 
@@ -815,6 +916,15 @@ ul{
 			max-width: 1152px;
 		}
 	}
+
+	#proccess{
+		max-width: 80%;
+		margin: 5rem auto 2rem;
+
+		#proccesses{
+			max-width: 90%;
+		}
+	}
 }
 
 
@@ -878,5 +988,28 @@ ul{
 		}
 	}	
 
+	#proccess{
+		max-width: 75%;
+		margin: 7rem auto 4rem;
+
+			#imgTitle{
+
+					h2{
+						margin: 0 25%;
+					}
+
+					img{
+						max-width: 40%;
+					}
+				}
+
+			#proccesses{
+					
+				.box{
+					margin: 0 auto 1rem;
+					max-width: 84%;
+			}
+		}
 	}
+}
 
