@@ -50,7 +50,10 @@ ul {
 #services {
   margin: 0;
   margin-top: 5rem;
-  margin-bottom: 3rem; }
+  margin-bottom: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  background-color: #f0f0f5; }
   #services #titleContainer {
     display: flex;
     flex-direction: column;
@@ -69,7 +72,10 @@ ul {
       justify-content: center;
       display: flex;
       flex-direction: column;
+      margin: 0 auto;
       padding-bottom: 2rem; }
+      #services #iconsContainer .box img {
+        max-height: 160px; }
       #services #iconsContainer .box h3 {
         margin: 2rem 0 .5rem; }
       #services #iconsContainer .box p {
@@ -108,7 +114,8 @@ ul {
 
 #prices {
   background-color: #600080;
-  margin-top: 3rem; }
+  margin-top: 3rem;
+  padding-bottom: 0rem; }
   #prices h2 {
     font-size: 28px;
     text-align: center;
@@ -116,7 +123,7 @@ ul {
     padding-top: 5rem; }
   #prices .container {
     padding-top: 0rem;
-    padding-bottom: 3rem;
+    padding-bottom: 0rem;
     color: #fff;
     display: flex;
     flex-direction: column; }
@@ -147,6 +154,38 @@ ul {
         background-color: transparent;
         padding: 20px 35px;
         color: #fff; }
+  #prices #ulContainer {
+    padding-bottom: 6rem; }
+    #prices #ulContainer p {
+      font-size: 18px;
+      line-height: 27px;
+      color: #fff;
+      padding: 1rem 2rem; }
+    #prices #ulContainer a {
+      color: #fff;
+      text-decoration: none;
+      border-bottom: 2px solid lightblue; }
+    #prices #ulContainer .iconoOK::before {
+      font-family: "Font Awesome 5 Free";
+      content: "\f058";
+      padding-right: 1rem;
+      color: #fff; }
+    #prices #ulContainer ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0; }
+      #prices #ulContainer ul li {
+        color: #fff;
+        margin: .5rem 0 0 0;
+        text-align: center; }
+
+#proccess {
+  margin-top: 5rem; }
+  #proccess #imgTitle h2 {
+    text-align: center;
+    margin: 0 1rem; }
+  #proccess #imgTitle img {
+    max-width: 100%; }
 
 @media screen and (min-width: 600px) {
   #header nav {
@@ -160,6 +199,9 @@ ul {
     #hero .imgContainer {
       margin-top: 5rem; }
 
+  #services #iconsContainer .box {
+    max-width: 80%; }
+
   #features {
     max-width: 85%; }
     #features #textFeature h2 {
@@ -172,7 +214,19 @@ ul {
       display: flex;
       justify-content: center; }
       #features #imageFeature img {
-        max-width: 100%; } }
+        max-width: 100%; }
+
+  #prices #ulContainer ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0; }
+    #prices #ulContainer ul .iconoOK::before {
+      padding-left: 30px; }
+    #prices #ulContainer ul li {
+      color: #fff;
+      margin: .5rem 0 0 0;
+      text-align: center; } }
 @media screen and (min-width: 600px) and (max-width: 1024px) and (orientation: landscape) {
   h1 {
     color: red; } }
@@ -250,6 +304,7 @@ ul {
       max-width: 95%;
       margin: 5rem auto 0; }
       #services #iconsContainer .box {
+        max-width: 100%;
         padding-bottom: 0rem; }
       #services #iconsContainer #box1 {
         grid-column: 1 / 2;
@@ -283,7 +338,7 @@ ul {
     font-size: 32px; }
   #prices .container {
     padding-top: 0rem;
-    padding-bottom: 3rem;
+    padding-bottom: 0rem;
     max-width: 90%;
     margin: 0 auto;
     color: #fff;
@@ -294,7 +349,19 @@ ul {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 2rem auto 2rem; } }
+      margin: 2rem auto 2rem; }
+  #prices #ulContainer {
+    max-width: 80%;
+    margin: 0 auto; }
+    #prices #ulContainer p {
+      text-align: center;
+      margin-bottom: 0rem; }
+    #prices #ulContainer ul {
+      display: flex;
+      justify-content: center;
+      margin-top: 0rem; }
+      #prices #ulContainer ul li {
+        align-self: center; } }
 @media screen and (min-width: 1024px) {
   #header nav {
     max-width: 85%; }
@@ -318,17 +385,20 @@ ul {
         line-height: 1.5rem;
         padding-right: 6rem; }
 
+  #services {
+    padding-bottom: 4rem;
+    margin-top: 4rem; }
+
   #prices h2 {
     font-size: 32px; }
   #prices .container {
-    padding-top: 0rem;
-    padding-bottom: 3rem;
     max-width: 90%;
     margin: 0 auto;
     color: #fff;
     display: grid;
-    grid-template-columns: 50% 50% 50% 50%;
-    grid-template-rows: 100%; }
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 100%;
+    grid-column-gap: .3rem; }
     #prices .container .boxPrice {
       display: flex;
       flex-direction: column;
@@ -412,7 +482,13 @@ ul {
     #features #textFeature ul {
       font-size: 20px; }
       #features #textFeature ul li {
-        padding: 1rem 0; } }
+        padding: 1rem 0; }
+
+  #prices h2 {
+    font-size: 32px;
+    margin: 0 auto 1rem; }
+  #prices .container {
+    max-width: 1152px; } }
 @media screen and (min-width: 1600px) {
   #header nav ul {
     display: flex;
@@ -434,7 +510,7 @@ ul {
     display: grid;
     grid-template-columns: 40% 60%;
     grid-template-rows: 25% 25% 25% 25%;
-    margin: 0 auto 12rem auto; }
+    margin: 0 auto 6rem auto; }
     #features #textFeature {
       max-width: 80%;
       grid-row: 1 / 5;
