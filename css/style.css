@@ -12,26 +12,35 @@ p {
 ul {
   font-family: "Josefin Sans", sans-serif; }
 
-#header nav {
-  padding: 1.75rem 2.3rem 0 2.25rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-  #header nav h1 {
-    font-size: 1rem; }
-  #header nav ul {
-    display: none; }
+#header {
+  background-color: #391787; }
+  #header nav {
+    padding: 4vh 2.3rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    #header nav h1 {
+      font-size: 1.2rem;
+      color: #fff !important; }
+    #header nav ul {
+      display: none; }
+    #header nav i {
+      color: #fff; }
 
 #hero {
-  margin-top: 2rem; }
+  padding-top: 2rem;
+  background-color: #391787;
+  height: 85vh; }
   #hero .textContainer {
     max-width: 80%;
     margin: 0 auto; }
     #hero .textContainer h1 {
-      font-size: 1.7rem; }
+      font-size: 1.7rem;
+      color: #fff !important; }
     #hero .textContainer p {
       font-size: 1.1rem;
-      line-height: 1.6rem; }
+      line-height: 1.6rem;
+      color: #fff !important; }
     #hero .textContainer button {
       font-family: "Josefin Sans", sans-serif;
       font-size: .8rem;
@@ -42,10 +51,8 @@ ul {
       border: none;
       text-transform: uppercase;
       cursor: pointer; }
-  #hero .imgContainer {
-    margin-top: 3rem; }
-    #hero .imgContainer img {
-      max-width: 100%; }
+  #hero .imgContainer img {
+    max-width: 80%; }
 
 #services {
   margin: 0;
@@ -221,7 +228,7 @@ ul {
       #pageFooter #newsletter #newsletterBox form input[type=submit] {
         font-family: "Roboto", sans-serif;
         font-size: .8rem;
-        border: 2px solid #fff;
+        border: 2px solid #ac00e6;
         border-radius: 33px;
         background-color: #ac00e6;
         padding: 20px 35px;
@@ -260,14 +267,13 @@ ul {
 @media screen and (min-width: 600px) {
   #header nav {
     max-width: 80%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding-bottom: 2rem; }
 
-  #hero {
+  #hero .textContainer {
+    max-width: 80%; }
+  #hero .imgContainer {
     margin-top: 5rem; }
-    #hero .textContainer {
-      max-width: 80%; }
-    #hero .imgContainer {
-      margin-top: 5rem; }
 
   #services #iconsContainer .box {
     max-width: 80%; }
@@ -313,28 +319,15 @@ ul {
 @media screen and (min-width: 768px) {
   #header nav {
     max-width: 85%; }
-    #header nav i {
-      display: none; }
-    #header nav ul {
-      display: flex;
-      width: 25%;
-      margin-right: 5%;
-      justify-content: space-between;
-      list-style: none; }
-      #header nav ul li {
-        font-size: .9rem;
-        font-weight: 700; }
-        #header nav ul li a {
-          text-decoration: none;
-          color: #ac00e6;
-          cursor: pointer; }
 
   #hero {
+    height: auto;
     display: grid;
     grid-template-columns: 7% 38% 55%;
     grid-template-rows: 25% 25% 25% 25%;
     max-width: 100%;
-    margin: 5rem auto 0; }
+    margin: 0 auto;
+    padding-bottom: 10vh; }
     #hero .textContainer {
       grid-column: 2 / 3;
       grid-row: 1 / 5;
@@ -363,11 +356,10 @@ ul {
       flex-direction: column;
       justify-content: center; }
       #hero .imgContainer img {
-        max-width: 100%; }
+        max-width: 90%; }
 
   #services {
     margin: 0;
-    margin-top: 7rem;
     margin-bottom: 6rem; }
     #services #titleContainer h2 {
       font-family: "Josefin Sans", sans-serif;
@@ -528,13 +520,27 @@ ul {
 @media screen and (min-width: 1024px) {
   #header nav {
     max-width: 85%; }
+    #header nav i {
+      display: none; }
+    #header nav ul {
+      display: flex;
+      width: 45%;
+      margin-right: 2%;
+      justify-content: space-between;
+      list-style: none; }
+      #header nav ul li {
+        font-size: .9rem;
+        font-weight: 700; }
+        #header nav ul li a {
+          text-decoration: none;
+          color: #fff;
+          cursor: pointer; }
 
   #hero {
     display: grid;
     grid-template-columns: 7% 38% 55%;
     grid-template-rows: 25% 25% 25% 25%;
-    max-width: 100%;
-    margin: 5rem auto 0; }
+    max-width: 100%; }
     #hero .textContainer {
       grid-column: 2 / 3;
       grid-row: 1 / 5; }
@@ -549,8 +555,7 @@ ul {
         padding-right: 6rem; }
 
   #services {
-    padding-bottom: 4rem;
-    margin-top: 4rem; }
+    padding-bottom: 4rem; }
 
   #prices h2 {
     font-size: 32px; }
@@ -595,15 +600,22 @@ ul {
       font-size: 1rem;
       padding: .15rem 0; } }
 @media screen and (min-width: 1200px) {
-  #hero .textContainer h1 {
-    font-size: 3rem;
-    line-height: 3.5rem;
-    margin: 1rem auto 0 auto;
-    padding-right: 0rem; }
-  #hero .textContainer p {
-    font-size: 1.3rem;
-    line-height: 1.75rem;
-    padding-right: 0rem; }
+  #header nav {
+    height: 6vh;
+    padding: 4vh 0; }
+
+  #hero {
+    height: 87vh;
+    padding: 0; }
+    #hero .textContainer h1 {
+      font-size: 3rem;
+      line-height: 3.5rem;
+      margin: 1rem auto 0 auto;
+      padding-right: 0rem; }
+    #hero .textContainer p {
+      font-size: 1.3rem;
+      line-height: 1.75rem;
+      padding-right: 0rem; }
 
   #services #iconsContainer {
     max-width: 80%; }
@@ -619,32 +631,40 @@ ul {
     #proccess #imgTitle img {
       max-width: 35%; }
 
-  #pageFooter #newsletter {
-    max-width: 40%;
-    padding: 2rem 0; }
-  #pageFooter footer {
-    padding: 5rem 0; }
-    #pageFooter footer #footerBox {
-      grid-template-columns: 20% 15% 20% 20% 15% 10%;
-      max-width: 85%; }
-      #pageFooter footer #footerBox h4 {
-        font-size: 2rem;
-        padding: 0 20% 0 5%; } }
+  #pageFooter {
+    background-color: #f2e6ff; }
+    #pageFooter #newsletter {
+      max-width: 40%;
+      padding: 5rem 0; }
+      #pageFooter #newsletter #newsletterBox {
+        padding: 0; }
+    #pageFooter footer {
+      padding: 5rem 0; }
+      #pageFooter footer #footerBox {
+        grid-template-columns: 20% 15% 20% 20% 15% 10%;
+        max-width: 85%; }
+        #pageFooter footer #footerBox h4 {
+          font-size: 2rem;
+          padding: 0 20% 0 5%; } }
 @media screen and (min-width: 1400px) {
   #header nav {
-    padding: 0;
+    height: 6vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    width: 100%;
-    margin-top: 1.5rem; }
+    width: 100%; }
+    #header nav h1 {
+      font-size: 1.6rem; }
+    #header nav ul li {
+      font-size: 1.2rem; }
 
   #hero {
-    margin-top: 10rem;
-    max-width: 95%;
-    grid-template-columns: 5% 35% 55%; }
+    height: 87vh;
+    grid-template-columns: 7% 33% 55%;
+    padding-top: 0;
+    padding-bottom: 0; }
     #hero .textContainer {
       grid-column: 2 / 3;
       grid-row: 1 / 5;
@@ -695,7 +715,7 @@ ul {
 
   #pageFooter #newsletter {
     max-width: 25%;
-    padding: 3rem 0; }
+    padding: 5rem 0; }
   #pageFooter footer {
     padding: 5rem 0; }
     #pageFooter footer #footerBox {
@@ -716,9 +736,6 @@ ul {
       font-size: .9rem;
       font-weight: 700;
       color: #ac00e6; }
-
-  #hero {
-    margin-top: 6rem; }
 
   #features {
     max-width: 1300px;
