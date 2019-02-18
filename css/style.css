@@ -198,6 +198,65 @@ ul {
         font-size: 16px;
         line-height: 24px; }
 
+#pageFooter #newsletter {
+  max-width: 70%;
+  margin: 0 auto; }
+  #pageFooter #newsletter #newsletterBox {
+    padding-bottom: 4rem; }
+    #pageFooter #newsletter #newsletterBox h3 {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 32px;
+      text-align: center; }
+    #pageFooter #newsletter #newsletterBox form {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap; }
+      #pageFooter #newsletter #newsletterBox form input[type=email] {
+        padding: 10px;
+        border: none;
+        background-color: #f0f0f5;
+        color: #colorParrafo;
+        font-family: "Roboto", sans-serif;
+        font-size: 1rem; }
+      #pageFooter #newsletter #newsletterBox form input[type=submit] {
+        font-family: "Roboto", sans-serif;
+        font-size: .8rem;
+        border: 2px solid #fff;
+        border-radius: 33px;
+        background-color: #ac00e6;
+        padding: 20px 35px;
+        color: #fff;
+        align-self: center;
+        justify-content: center;
+        margin-top: 1rem; }
+#pageFooter footer {
+  background-color: #600080;
+  color: #fff;
+  padding-bottom: 2rem; }
+  #pageFooter footer #footerBox {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 80%; }
+    #pageFooter footer #footerBox h4 {
+      color: #fff !important;
+      font-size: 26px;
+      padding-top: 1.5rem;
+      margin: 1.3rem 0; }
+    #pageFooter footer #footerBox ul {
+      list-style: none;
+      padding-left: 0; }
+      #pageFooter footer #footerBox ul li {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 1rem;
+        font-weight: 100; }
+    #pageFooter footer #footerBox #socialIcons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-content: center;
+      margin-top: 1rem; }
+
 @media screen and (min-width: 600px) {
   #header nav {
     max-width: 80%;
@@ -244,7 +303,10 @@ ul {
     #proccess #proccesses .box {
       max-width: 75%; }
       #proccess #proccesses .box p {
-        text-align: left; } }
+        text-align: left; }
+
+  #pageFooter #newsletter {
+    max-width: 50%; } }
 @media screen and (min-width: 600px) and (max-width: 1024px) and (orientation: landscape) {
   h1 {
     color: red; } }
@@ -401,7 +463,68 @@ ul {
       #proccess #proccesses .box h3 {
         text-align: center; }
       #proccess #proccesses .box p {
-        text-align: center; } }
+        text-align: center; }
+
+  #pageFooter #newsletter {
+    max-width: 50%;
+    margin: 0 auto; }
+    #pageFooter #newsletter #newsletterBox {
+      padding-bottom: 4rem; }
+      #pageFooter #newsletter #newsletterBox h3 {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 32px;
+        text-align: center; }
+      #pageFooter #newsletter #newsletterBox form {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap; }
+        #pageFooter #newsletter #newsletterBox form input[type=email] {
+          padding: 10px;
+          border: none;
+          background-color: #f0f0f5;
+          color: #colorParrafo;
+          font-family: "Roboto", sans-serif;
+          font-size: 1.2rem; }
+        #pageFooter #newsletter #newsletterBox form input[type=submit] {
+          font-family: "Roboto", sans-serif;
+          font-size: .8rem;
+          border: 2px solid #fff;
+          border-radius: 33px;
+          background-color: #ac00e6;
+          padding: 20px 35px;
+          color: #fff;
+          align-self: center;
+          justify-content: center;
+          margin-top: 1rem; }
+  #pageFooter footer {
+    padding-top: 2rem;
+    padding-bottom: 2rem; }
+    #pageFooter footer #footerBox {
+      display: grid;
+      grid-template-columns: 20% 15% 20% 25% 15% 5%;
+      grid-template-rows: 1fr;
+      margin: 0 auto;
+      max-width: 95%; }
+      #pageFooter footer #footerBox h4 {
+        color: #fff !important;
+        font-size: 20px;
+        padding: 0rem 10%;
+        margin: 1rem 0 1rem 1rem; }
+      #pageFooter footer #footerBox ul {
+        list-style: none;
+        padding-left: 0;
+        align-self: center; }
+        #pageFooter footer #footerBox ul li {
+          font-family: "Josefin Sans", sans-serif;
+          font-size: .8rem;
+          font-weight: 100;
+          padding: .15rem 0; }
+      #pageFooter footer #footerBox #socialIcons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+        margin-top: 1rem; } }
 @media screen and (min-width: 1024px) {
   #header nav {
     max-width: 85%; }
@@ -461,7 +584,16 @@ ul {
     margin: 0 16rem; }
   #proccess #proccesses {
     max-width: 80%;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+
+  #pageFooter #newsletter {
+    max-width: 40%; }
+  #pageFooter footer #footerBox {
+    grid-template-columns: 20% 15% 20% 20% 20% 5%;
+    max-width: 90%; }
+    #pageFooter footer #footerBox ul li {
+      font-size: 1rem;
+      padding: .15rem 0; } }
 @media screen and (min-width: 1200px) {
   #hero .textContainer h1 {
     font-size: 3rem;
@@ -485,8 +617,20 @@ ul {
     #proccess #imgTitle h2 {
       margin: 0 22%; }
     #proccess #imgTitle img {
-      max-width: 35%; } }
-@media screen and (min-width: 1440px) {
+      max-width: 35%; }
+
+  #pageFooter #newsletter {
+    max-width: 40%;
+    padding: 2rem 0; }
+  #pageFooter footer {
+    padding: 5rem 0; }
+    #pageFooter footer #footerBox {
+      grid-template-columns: 20% 15% 20% 20% 15% 10%;
+      max-width: 85%; }
+      #pageFooter footer #footerBox h4 {
+        font-size: 2rem;
+        padding: 0 20% 0 5%; } }
+@media screen and (min-width: 1400px) {
   #header nav {
     padding: 0;
     display: flex;
@@ -547,7 +691,19 @@ ul {
     max-width: 80%;
     margin: 5rem auto 2rem; }
     #proccess #proccesses {
-      max-width: 90%; } }
+      max-width: 90%; }
+
+  #pageFooter #newsletter {
+    max-width: 25%;
+    padding: 3rem 0; }
+  #pageFooter footer {
+    padding: 5rem 0; }
+    #pageFooter footer #footerBox {
+      grid-template-columns: 20% 15% 20% 20% 20% 15%;
+      max-width: 85%; }
+      #pageFooter footer #footerBox h4 {
+        font-size: 2rem;
+        padding: 0 20% 0 5%; } }
 @media screen and (min-width: 1600px) {
   #header nav ul {
     display: flex;
@@ -593,6 +749,15 @@ ul {
       max-width: 40%; }
     #proccess #proccesses .box {
       margin: 0 auto 1rem;
-      max-width: 84%; } }
+      max-width: 84%; }
+
+  #pageFooter footer {
+    padding: 5rem 0; }
+    #pageFooter footer #footerBox {
+      grid-template-columns: 20% 15% 20% 20% 15% 20%;
+      max-width: 75%; }
+      #pageFooter footer #footerBox h4 {
+        font-size: 2rem;
+        padding: 0 20% 0 5%; } }
 
 /*# sourceMappingURL=style.css.map */
