@@ -3,27 +3,27 @@
 //Funciones para hacer scroll clickeando los links del nav y bajar a los diferentes divs de la web:
 
 function scrollHero(){
-	document.querySelector('#hero').scrollIntoView({ behavior: 'smooth'});
+	document.querySelector('#hero').scrollIntoView({block: "start", behavior: "smooth"});
 }
 
 function scrollServices(){
-	document.querySelector('#services').scrollIntoView({ behavior: 'smooth'});
+	document.querySelector('#servicesAnchor').scrollIntoView({block: "start", behavior: "smooth"});
 }
 
 function scrollProps(){
-	document.querySelector('#properties').scrollIntoView({ behavior: 'smooth'});
+	document.querySelector('#properties').scrollIntoView({block: "start", behavior: "smooth"});
 }
 
 function scrollPrices(){
-	document.querySelector('#prices').scrollIntoView({ behavior: 'smooth'});
+	document.querySelector('#prices').scrollIntoView({block: "start", behavior: "smooth"});
 }
 
 function scrollProccess(){
-	document.querySelector('#proccess').scrollIntoView({ behavior: 'smooth'});
+	document.querySelector('#proccessAnchor').scrollIntoView({block: "start", behavior: "smooth"});
 }
 
 function scrollContact(){
-	document.querySelector('#pageFooter').scrollIntoView({ behavior: 'smooth'});
+	document.querySelector('#footerAnchor').scrollIntoView({block: "start", behavior: "smooth"});
 }
 
 
@@ -51,7 +51,7 @@ function burgerMenu(){
 		document.getElementById('menuBackground').classList.add("menuDesplegado");
 		document.getElementById("menu").classList.add("showMenu");
 	}
-	}
+}
 
 	
 

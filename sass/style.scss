@@ -42,12 +42,10 @@ button{
 	
 	img{
 		margin-top: -900px;
-		margin-right: 100px;
-		margin-left: 0px;
+		margin-right: 0px;
+		margin-left: calc(50% - 11.5rem);
 		transition: .8s;
 		position: absolute;
-
-		
 	}
 
 	img.menuDesplegado{
@@ -86,7 +84,7 @@ button{
 			left: 40%;
 			margin-left: 0px;
 			z-index: 500;
-			transition: 3s;
+			transition: .4s;
 
 				ul{
 					display: inline;
@@ -105,7 +103,6 @@ button{
 		}
 
 		#menu.showMenu{
-		
 			opacity: 1;
 		}
 	}
@@ -508,6 +505,14 @@ button{
 			#header{
 				background-color: #391787;
 
+					img{
+						margin-top: -900px;
+						margin-right: 0px;
+						margin-left: calc(50% - 10rem);
+						transition: .8s;
+						position: absolute;
+					}
+
 				nav{
 					padding: 4vh 2.3rem 0;
 					display: flex;
@@ -541,12 +546,20 @@ button{
 	@media screen and (min-width:600px){
 		#header{
 
-			nav{
-				max-width: 80%;
-				margin:0 auto;
-				padding-bottom: 2rem;
+				img{
+					margin-top: -900px;
+					margin-right: 0px;
+					margin-left: calc(50% - 6rem);
+					transition: .8s;
+					position: absolute;
+					}
+
+				nav{
+					max-width: 80%;
+					margin:0 auto;
+					padding-bottom: 2rem;
+				}
 			}
-		}
 
 		#hero{
 			
@@ -652,6 +665,21 @@ button{
 @media screen and (min-width:768px) {
 
 	#header{
+
+	img{
+		margin-top: -900px;
+		margin-right: 0px;
+		margin-left: calc(60% - 3rem);
+		transition: .8s;
+		position: absolute;
+	}
+
+	img.menuDesplegado{
+		margin-top: -700px;
+		margin-right: 100px;
+		margin-left: -100px;
+	}
+
 	nav{
 		max-width: 85%;
 	}
@@ -961,6 +989,11 @@ button{
 @media screen and (min-width:1024px) {
 
 	#header{
+
+		img{
+			display: none;
+		}
+
 		nav{
 			max-width: 85%;
 
@@ -987,6 +1020,10 @@ button{
 						cursor: pointer;
 					}
 				}
+			}
+
+			#menu{
+				display: none;
 			}	
 		}
 	}
