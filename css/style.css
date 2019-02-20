@@ -1,5 +1,7 @@
 body {
-  margin: 0; }
+  margin: 0;
+  overflow-x: hidden;
+  width: 100%; }
 
 h1, h2, h3, h4, h5 {
   color: #43414e;
@@ -12,8 +14,22 @@ p {
 ul {
   font-family: "Josefin Sans", sans-serif; }
 
+button {
+  outline: 0; }
+
 #header {
-  background-color: #391787; }
+  background-color: #391787;
+  overflow: hidden; }
+  #header img {
+    margin-top: -900px;
+    margin-right: 100px;
+    margin-left: 0px;
+    transition: .8s;
+    position: absolute; }
+  #header img.menuDesplegado {
+    margin-top: -700px;
+    margin-right: 100px;
+    margin-left: -170px; }
   #header nav {
     padding: 4vh 2.3rem 0;
     display: flex;
@@ -25,12 +41,34 @@ ul {
     #header nav ul {
       display: none; }
     #header nav i {
-      color: #fff; }
+      color: #fff;
+      cursor: pointer;
+      z-index: 100; }
+    #header nav #menu {
+      display: inline;
+      opacity: 0;
+      position: absolute;
+      padding-top: 10rem;
+      left: 40%;
+      margin-left: 0px;
+      z-index: 500;
+      transition: 3s; }
+      #header nav #menu ul {
+        display: inline;
+        padding: 0; }
+        #header nav #menu ul li {
+          list-style: none;
+          padding: .5rem 0; }
+          #header nav #menu ul li a {
+            color: #fff;
+            text-decoration: none; }
+  #header #menu.showMenu {
+    opacity: 1; }
 
 #hero {
   padding-top: 2rem;
   background-color: #391787;
-  height: 85vh; }
+  height: 100vh; }
   #hero .textContainer {
     max-width: 80%;
     margin: 0 auto; }
@@ -39,26 +77,31 @@ ul {
       color: #fff !important; }
     #hero .textContainer p {
       font-size: 1.1rem;
-      line-height: 1.6rem;
+      line-height: 1.8rem;
       color: #fff !important; }
     #hero .textContainer button {
       font-family: "Josefin Sans", sans-serif;
       font-size: .8rem;
       border-radius: 6px;
-      background-color: #ac00e6;
+      background-color: #1180b5;
       padding: 1.1rem 1.7rem;
       color: #fff;
       border: none;
       text-transform: uppercase;
-      cursor: pointer; }
+      cursor: pointer;
+      -webkit-transition: background-color .5s ease-out;
+      -moz-transition: background-color .5s ease-out;
+      -o-transition: background-color .5s ease-out;
+      transition: background-color .5s ease-out; }
+    #hero .textContainer button:hover {
+      background-color: #0b5d84; }
   #hero .imgContainer img {
     max-width: 80%; }
 
 #services {
   margin: 0;
-  margin-top: 5rem;
   margin-bottom: 3rem;
-  padding-top: 4rem;
+  padding-top: 5rem;
   padding-bottom: 2rem;
   background-color: #f0f0f5; }
   #services #titleContainer {
@@ -115,12 +158,12 @@ ul {
       font-family: "Font Awesome 5 Free";
       content: "\f058";
       padding-right: 1rem;
-      color: #ac00e6; }
+      color: #b923f7; }
   #features #imageFeature img {
     max-width: 100%; }
 
 #prices {
-  background-color: #600080;
+  background-color: #391787;
   margin-top: 3rem;
   padding-bottom: 0rem; }
   #prices h2 {
@@ -146,7 +189,7 @@ ul {
         font-size: 58px;
         font-weight: 700;
         margin: .5rem 0;
-        color: #d24dff; }
+        color: #589bff; }
       #prices .container .boxPrice ul {
         list-style: none;
         padding-left: 0;
@@ -160,7 +203,16 @@ ul {
         border-radius: 33px;
         background-color: transparent;
         padding: 20px 35px;
-        color: #fff; }
+        color: #fff;
+        cursor: pointer;
+        -webkit-transition: background-color .5s ease-out;
+        -moz-transition: background-color .5s ease-out;
+        -o-transition: background-color .5s ease-out;
+        transition: background-color .5s ease-out; }
+      #prices .container .boxPrice button:hover {
+        background-color: #fff;
+        color: #391787;
+        font-weight: 700; }
   #prices #ulContainer {
     padding-bottom: 6rem; }
     #prices #ulContainer p {
@@ -228,16 +280,26 @@ ul {
       #pageFooter #newsletter #newsletterBox form input[type=submit] {
         font-family: "Roboto", sans-serif;
         font-size: .8rem;
-        border: 2px solid #ac00e6;
+        border: none;
         border-radius: 33px;
-        background-color: #ac00e6;
+        background-color: #937cc7;
         padding: 20px 35px;
         color: #fff;
         align-self: center;
         justify-content: center;
-        margin-top: 1rem; }
+        margin-top: 1rem;
+        cursor: pointer;
+        outline: 0;
+        -webkit-transition: background-color .5s ease-out;
+        -moz-transition: background-color .5s ease-out;
+        -o-transition: background-color .5s ease-out;
+        transition: background-color .5s ease-out; }
+      #pageFooter #newsletter #newsletterBox form input[type=submit]:hover {
+        background-color: #28047b;
+        color: #fff;
+        font-weight: 300; }
 #pageFooter footer {
-  background-color: #600080;
+  background-color: #391787;
   color: #fff;
   padding-bottom: 2rem; }
   #pageFooter footer #footerBox {
@@ -264,6 +326,26 @@ ul {
       align-content: center;
       margin-top: 1rem; }
 
+@media screen and (min-width: 350px) {
+  #header {
+    background-color: #391787; }
+    #header nav {
+      padding: 4vh 2.3rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      #header nav h1 {
+        font-size: 1.2rem;
+        color: #fff !important; }
+      #header nav ul {
+        display: none; }
+      #header nav i {
+        color: #fff; }
+
+  #hero {
+    padding-top: 2rem;
+    background-color: #391787;
+    height: 85vh; } }
 @media screen and (min-width: 600px) {
   #header nav {
     max-width: 80%;
@@ -339,14 +421,6 @@ ul {
       #hero .textContainer h1 {
         margin: 1rem auto 0 auto; }
       #hero .textContainer button {
-        font-family: 'Merriweather Sans', sans-serif;
-        font-size: .8rem;
-        border-radius: 6px;
-        background-color: #ac00e6;
-        padding: 1rem 1.4rem;
-        color: #fff;
-        border: none;
-        text-transform: uppercase;
         max-width: 9rem; }
     #hero .imgContainer {
       grid-column: 3 / 4;
@@ -480,9 +554,9 @@ ul {
         #pageFooter #newsletter #newsletterBox form input[type=submit] {
           font-family: "Roboto", sans-serif;
           font-size: .8rem;
-          border: 2px solid #fff;
+          border: none;
           border-radius: 33px;
-          background-color: #ac00e6;
+          background-color: #937cc7;
           padding: 20px 35px;
           color: #fff;
           align-self: center;
@@ -510,7 +584,8 @@ ul {
           font-family: "Josefin Sans", sans-serif;
           font-size: .8rem;
           font-weight: 100;
-          padding: .15rem 0; }
+          padding: .15rem 0;
+          cursor: pointer; }
       #pageFooter footer #footerBox #socialIcons {
         display: flex;
         flex-direction: row;
@@ -527,7 +602,8 @@ ul {
       width: 45%;
       margin-right: 2%;
       justify-content: space-between;
-      list-style: none; }
+      list-style: none;
+      z-index: 100; }
       #header nav ul li {
         font-size: .9rem;
         font-weight: 700; }
@@ -614,7 +690,7 @@ ul {
       padding-right: 0rem; }
     #hero .textContainer p {
       font-size: 1.3rem;
-      line-height: 1.75rem;
+      line-height: 2rem;
       padding-right: 0rem; }
 
   #services #iconsContainer {
@@ -632,7 +708,7 @@ ul {
       max-width: 35%; }
 
   #pageFooter {
-    background-color: #f2e6ff; }
+    background-color: #d7d0ff; }
     #pageFooter #newsletter {
       max-width: 40%;
       padding: 5rem 0; }
@@ -670,8 +746,8 @@ ul {
       grid-row: 1 / 5;
       max-width: 85%; }
       #hero .textContainer h1 {
-        font-size: 2.5rem;
-        line-height: 3.5rem;
+        font-size: 2.8rem;
+        line-height: 4rem;
         margin: -3rem auto 0 auto; }
       #hero .textContainer p {
         font-size: 1.4rem;
@@ -725,17 +801,11 @@ ul {
         font-size: 2rem;
         padding: 0 20% 0 5%; } }
 @media screen and (min-width: 1600px) {
-  #header nav ul {
-    display: flex;
-    width: 15%;
-    margin-right: 5%;
-    justify-content: space-between;
-    list-style: none; }
-    #header nav ul li {
-      font-family: 'Merriweather Sans', sans-serif;
-      font-size: .9rem;
-      font-weight: 700;
-      color: #ac00e6; }
+  #hero .textContainer h1 {
+    font-size: 3rem;
+    line-height: 4rem; }
+  #hero .imgContainer {
+    margin-top: -4rem; }
 
   #features {
     max-width: 1300px;
