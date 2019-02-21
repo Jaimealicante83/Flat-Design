@@ -10,8 +10,8 @@ function scrollServices(){
 	document.querySelector('#servicesAnchor').scrollIntoView({block: "start", behavior: "smooth"});
 }
 
-function scrollProps(){
-	document.querySelector('#properties').scrollIntoView({block: "start", behavior: "smooth"});
+function scrollFeatures(){
+	document.querySelector('#featuresAnchor').scrollIntoView({block: "start", behavior: "smooth"});
 }
 
 function scrollPrices(){
@@ -53,7 +53,7 @@ function burgerMenu(){
 	}
 }
 
-	
+
 
 
 
